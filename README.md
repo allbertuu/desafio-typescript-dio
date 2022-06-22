@@ -2,6 +2,8 @@
 
 Desafio de projeto realizado em um bootcamp da DIO (Digital Innovation One), com o objetivo de colocar em prática meus conhecimentos em TypeScript.
 
+> O desafio consiste em resolver um problema na aplicação em JavaScript que a impede de ser utilizada, fazendo assim o uso do TypeScript para desenvolver uma aplicação sem erros e funcional.
+
 ## Rodando localmente
 
 Clone o projeto
@@ -13,7 +15,7 @@ Clone o projeto
 Entre no diretório do projeto
 
 ```bash
-  cd my-project
+  cd desafio-typescript-dio
 ```
 
 Instale as dependências
