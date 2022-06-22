@@ -7,14 +7,18 @@ let soma = document.getElementById("soma") as HTMLInputElement;
 let campoSaldo = document.getElementById("campo-saldo");
 
 // inicializar campos em zero
-if (campoSaldo) campoSaldo.innerHTML = "0";
-if (soma) soma.value = "0";
+resetarCampos();
 
 /********************
- ****** FUNÇÕES ******
+ ****** FUNÇÕES *****
  ********************/
-const somarAoSaldo = (soma: string) => {
-  // previne uso do campo saldo se for um valor falsy
+function resetarCampos(): void {
+  if (campoSaldo) campoSaldo.innerHTML = "0";
+  if (soma) soma.value = "0";
+}
+
+function somarAoSaldo(soma: string): void {
+  // previne uso do campo saldo se o mesmo for um valor falsy no contexto booleano
   if (!campoSaldo) {
     return;
   }
@@ -25,16 +29,12 @@ const somarAoSaldo = (soma: string) => {
   campoSaldoConvertido += somaConvertida;
   // atualizar o campo saldo com o novo valor obtido na soma
   campoSaldo.innerHTML = campoSaldoConvertido.toString();
-};
+}
 
-const limparSaldo = () => {
-  // resetar campos à zero
-  if (campoSaldo) campoSaldo.innerHTML = "0";
-  if (soma) soma.value = "0";
-};
+const limparSaldo = (): void => resetarCampos();
 
 /********************
- ** EVENT LISTENERS **
+ ** EVENT LISTENERS *
  ********************/
 if (botaoAtualizar)
   botaoAtualizar.addEventListener("click", function () {
